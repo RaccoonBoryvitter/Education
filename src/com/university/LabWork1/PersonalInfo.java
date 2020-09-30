@@ -6,8 +6,8 @@ public class PersonalInfo {
         // Примитивы (Primitives)
         byte myAge = 18;
         short myBirthYear = 2002;
-        int daysPassed = 6636;
-        long minutesPassed = 9_550_840L;
+        int daysPassed = 6643;
+        long secondsPassed = 573_955_200L;
         float myWeight = 74.2f;
         double myHeight = 178.0;
         char myGender = 'M';
@@ -26,10 +26,10 @@ public class PersonalInfo {
         System.out.print(" > Age: ██ (borned in ████)");
         Thread.sleep(750);
         System.out.println("\r > Age: " + myAge + " (borned in " + myBirthYear + ")");
-        System.out.print(" > Passed days since birth: ████ (███████ minutes)");
+        System.out.print(" > Passed days since birth: ████ (███████ seconds)");
         Thread.sleep(750);
         System.out.println("\r > Passed days since birth: " + daysPassed +
-                " (" + minutesPassed + " minutes)");
+                " (" + secondsPassed + " seconds)");
         System.out.print(" > Weight: ██.█ kg");
         Thread.sleep(750);
         System.out.println("\r > Weight: " + myWeight + " kg");
