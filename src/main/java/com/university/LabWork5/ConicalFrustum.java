@@ -1,11 +1,22 @@
 package com.university.LabWork5;
 
+/**
+ * Created by IntelliJ IDEA.
+ * Lessons.ConicalFrustum
+ *
+ * @Autor: pavel
+ * @DateTime: 02.10.2020|08:58
+ * @Version ConicalFrustum: 1.0
+ */
+
 public class ConicalFrustum {
     private float lowerRadius;
     private float upperRadius;
     private float height;
 
     // Constructors
+    public ConicalFrustum() { }
+
     public ConicalFrustum(float lowerRadius, float upperRadius, float height) {
         this.height = height;
         if (lowerRadius > upperRadius) {
@@ -78,11 +89,10 @@ public class ConicalFrustum {
 
     @Override
     public String toString() {
-        String out = "Conical Frustum Object Information: " +
+
+        return "[Conical Frustum Object Information]" +
                 "\n\tUpper Radius: " + this.getUpperRadius() +
                 "\n\tLower Radius: " + this.getLowerRadius() +
                 "\n\tHeight: " + this.getHeight();
-
-        return out;
     }
 }

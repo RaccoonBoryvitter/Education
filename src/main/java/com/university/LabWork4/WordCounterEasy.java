@@ -1,11 +1,5 @@
 package com.university.LabWork4;
 
-import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Paths;
-import java.nio.file.Files;
-
 public class WordCounterEasy {
 
     public static void main(String[] args) {
@@ -27,24 +21,13 @@ public class WordCounterEasy {
 
 
         // Удаление знаков препинания, пробелов, абзацов и тд
-        String marks = "\n.?!,;:\"";
-        for (int i = 0; i < marks.length(); i++) {
-            String m = String.valueOf(marks.charAt(i));
-            if(text.contains(m)) {
-                m = "[" + m + "]";
-                text = text.replaceAll(m, "");
-            }
-        }
-        text = text.replaceAll("--", "");
-        text = text.toLowerCase();
-
-        String[] words = text.split("\\s+");
+        String[] words = WordCounterHard.cleaner(text);
 
         // Создание массива уникальных слов
         int uniqueLength = 0;
         for (int i = 0; i < words.length; i++) {
             int j = 0;
-            for (j = 0; j < i; j++) {
+            for (; j < i; j++) {
                 if (words[i].equals(words[j]))
                     break;
 
@@ -71,8 +54,8 @@ public class WordCounterEasy {
         int[] wordFrequency = new int[uniqueLength];
         for (int i = 0; i < uniqueLength; i++) {
             int freq = 0;
-            for (int j = 0; j < words.length; j++) {
-                if(uniqueWords[i].equals(words[j]))
+            for (String word : words) {
+                if (uniqueWords[i].equals(word))
                     freq++;
             }
             wordFrequency[i] = freq;

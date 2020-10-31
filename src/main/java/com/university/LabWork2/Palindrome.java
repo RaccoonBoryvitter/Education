@@ -5,7 +5,7 @@ package com.university.LabWork2;
 public class Palindrome {
     public static void main(String[] args) {
 
-        String word = "Води, Сахара, хасидов";
+        String word = "«Ба-бах!» - у уха баб";
         System.out.println("> Is given string \"" + word + "\" a palindrome?");
 
         // Избавление от знаков препинания, пробелов и тд
@@ -16,11 +16,13 @@ public class Palindrome {
             if (!delim.contains(c))
                 result += c;
         }
+//        String result = new String(word);
+//        result = result.replaceAll("\\w+", "");
         result = result.toLowerCase();
 
         //Непосредственно сама проверка
         boolean isPalindrome = true;
-        byte size = (byte)(result.length());
+        int size = result.length();
         for (int i = 0; i < (size / 2); i++) {
             if (result.charAt(i) != result.charAt(size - 1 - i)) {
                 isPalindrome = false;

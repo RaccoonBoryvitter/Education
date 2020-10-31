@@ -8,7 +8,7 @@ public class Integral {
         double finish = Math.PI;
         int precision = 100000;
         double width = finish / precision;
-        double restrictionYLine = 1.0;
+        double restrictionYLine = 0.6;
         double currentX = 0;
         double rectangleIntegral = 0;
 
