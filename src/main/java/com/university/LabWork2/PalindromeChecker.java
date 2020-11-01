@@ -15,7 +15,7 @@ public class PalindromeChecker {
 
         // Избавление от знаков препинания, пробелов и тд
         String result = inputWord.toLowerCase()
-                .replaceAll("[^\\u0030-\\u0039\\u0061-\\u007A\\u0430-\\u0451\\u0454\\u0456\\u0457]", "");
+                .replaceAll("[^0-9a-z\\u0430-\\u0451\\u0454\\u0456\\u0457]", "");
 
         //Непосредственно сама проверка
         boolean status = true;

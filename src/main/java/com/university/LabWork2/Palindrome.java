@@ -8,7 +8,7 @@ import java.time.temporal.ChronoUnit;
 public class Palindrome {
     public static void main(String[] args) {
 
-        String word = "Но невидим архангел. Мороз узором лег на храм и дивен он";
+        String word = "TENET";
         System.out.println("> Is given string \"" + word + "\" a palindrome?");
         System.out.println("> Answer: " +  PalindromeChecker.isPalindrome(word));
     }
