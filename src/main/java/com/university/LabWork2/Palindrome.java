@@ -2,36 +2,15 @@ package com.university.LabWork2;
 
 //import java.util.StringTokenizer;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+
 public class Palindrome {
     public static void main(String[] args) {
 
-        String word = "«Ба-бах!» - у уха баб";
+        String word = "Но невидим архангел. Мороз узором лег на храм и дивен он";
         System.out.println("> Is given string \"" + word + "\" a palindrome?");
-
-        // Избавление от знаков препинания, пробелов и тд
-        String delim = " -:;!?,.–«»";
-        String result = "";
-        for (int i = 0; i < word.length(); i++) {
-            String c = String.valueOf(word.charAt(i));
-            if (!delim.contains(c))
-                result += c;
-        }
-//        String result = new String(word);
-//        result = result.replaceAll("\\w+", "");
-        result = result.toLowerCase();
-
-        //Непосредственно сама проверка
-        boolean isPalindrome = true;
-        int size = result.length();
-        for (int i = 0; i < (size / 2); i++) {
-            if (result.charAt(i) != result.charAt(size - 1 - i)) {
-                isPalindrome = false;
-                break;
-            }
-
-        }
-
-        System.out.println("> Answer: " + isPalindrome);
+        System.out.println("> Answer: " +  PalindromeChecker.isPalindrome(word));
     }
 }
 
