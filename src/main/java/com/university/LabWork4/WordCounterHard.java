@@ -5,6 +5,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 
 public class WordCounterHard {
 
@@ -29,6 +31,7 @@ public class WordCounterHard {
             Path path = Paths.get("D:/Education/Harry Potter and the Sorcerer.txt");
             byte[] data = Files.readAllBytes(path);
             String text = new String(data, StandardCharsets.UTF_8);
+            LocalDateTime start = LocalDateTime.now();
             String[] words = WordCounterHard.cleaner(text);
 
             // Создание массива уникальных слов
@@ -85,6 +88,8 @@ public class WordCounterHard {
                 uniqueWords[i] = tempWord;
             }
 
+            LocalDateTime finish = LocalDateTime.now();
+
             System.out.println("Words count: " + words.length);
             System.out.println("Unique Words Count: " + uniqueLength);
             System.out.println("----------------------------------------------");
@@ -95,6 +100,8 @@ public class WordCounterHard {
                 System.out.println("%");
             }
 
+            System.out.println("=========================================================");
+            System.out.println("Execution time: " + ChronoUnit.MILLIS.between(start, finish) + "ms");
         } catch (IOException ex) {
             System.out.println("ERROR: invalid path!");
         }
