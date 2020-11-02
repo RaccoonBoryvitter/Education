@@ -11,13 +11,13 @@ package com.university.LabWork7;
 
 public class Door extends Rectangle {
     private String material;
-    private String color;
+    private Color color;
     private String handleType;
     private String lockType;
     private float price;
     private int glassPanelAmount;
 
-    public Door(float height, String material, String color, int glassPanelAmount, float price) {
+    public Door(float height, String material, Color color, int glassPanelAmount, float price) {
         super(height);
         this.material = material;
         this.color = color;
@@ -25,7 +25,7 @@ public class Door extends Rectangle {
         this.price = price;
     }
 
-    public Door(float height, float width, String material, String color, int glassPanelAmount) {
+    public Door(float height, float width, String material, Color color, int glassPanelAmount) {
         super(height, width);
         this.material = material;
         this.color = color;
@@ -44,7 +44,7 @@ public class Door extends Rectangle {
         this.lockType = lockType;
     }
 
-    public Door(float height, String material, String color, String handleType, String lockType, int glassPanelAmount, float price) {
+    public Door(float height, String material, Color color, String handleType, String lockType, int glassPanelAmount, float price) {
         super(height);
         this.material = material;
         this.color = color;
@@ -54,7 +54,7 @@ public class Door extends Rectangle {
         this.price = price;
     }
 
-    public Door(float height, float width, String material, String color, String handleType, String lockType, int glassPanelAmount, float price) {
+    public Door(float height, float width, String material, Color color, String handleType, String lockType, int glassPanelAmount, float price) {
         super(height, width);
         this.material = material;
         this.color = color;
@@ -72,11 +72,11 @@ public class Door extends Rectangle {
         this.material = material;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
@@ -124,10 +124,5 @@ public class Door extends Rectangle {
                 ", glassPanelAmount = " + this.glassPanelAmount +
                 ", price = " + this.price +
                 '}';
-    }
-
-    public void favouriteTrack() {
-        System.out.println("If you listened to \"The Doors\" once in your life, then you are very good person");
-        System.out.println("My favourite track of this band is \"Riders on the Storm\"");
     }
 }

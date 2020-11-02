@@ -11,14 +11,13 @@ package com.university.LabWork7;
 
 public class MainDoor {
     public static void main(String[] args) {
-        Door door1 = new Door(2.0f, 1.2f, "дерево", "красный", 4);
+        Door door1 = new Door(2.0f, 1.2f, "дерево", Color.rgb(235, 0, 0), 4);
         Door door2 = new Door(1.95f, 1.1f, "стационарный", "цилиндровый");
-        Door door3 = new Door(1.5f, "железо", "серый", "поворотная", "кодовый", 0, 1300.50f);
+        Door door3 = new Door(1.5f, "железо", Color.rgb(160, 160, 160), "поворотная", "кодовый", 0, 1300.50f);
 
 
         System.out.println(door1);
         System.out.println(door2);
         System.out.println(door3);
-        door1.favouriteTrack();
     }
 }
